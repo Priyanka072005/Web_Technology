@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            font-family: sans-serif;
+            width: 50%;
+            min-width: 480px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Guess the Number</h1>
+        <p>We have selected random number from  1 to 15</p>
+        <label for="guessNumber">
+            Enter the guess :
+        </label>
+        <input type="text" id="number"/><br><br>
+        <input type="submit" value="Submit Guess" id="submit_guess" onclick="guess()"/>
+        <p id="message"></p>
+    </div>
+
+    <script src="GuessOPgame_activity.js"></script>
+</body>
+</html>

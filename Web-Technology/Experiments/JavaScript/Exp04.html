@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <style>
+        div{
+            width: fit-content;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 30px;
+            margin-left:450px;
+            margin-top: 120px;
+        }
+        h1{
+            color: rgb(27, 102, 231);
+        }
+        label{
+            font-weight: bold;
+        }
+        input{
+            font-weight: bold;
+        }
+
+    </style>
+    <body>
+        <div>
+            <form onsubmit="SubmitButtonClick()">
+                <h1>Registration Form</h1>
+                <label for="name">Name:</label>
+                <input type='text' id='name'/>
+                <span id='nameError'></span>
+                <br></br>
+
+                <label for="email">Email:</label>
+                <input type='Email' id='email'/>
+                <span id='emailError'></span>
+                <br></br>
+
+                <label for="password">Password :</label>
+                <input type='password' id='password'/>
+                <span id='passwordError'></span>
+                <br></br>
+
+                <input type='submit' value="Submit"><br><br>
+
+                <p id="successMsg"></p>
+            </form>
+        </div>
+
+        
+        <script src="Exp04.js"></script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+------Date - 24/03/2026 --------------------------------------
+Express 
+Express is a minimal and flexible web application framework for node.js
+That simplifies the development of web servers and API's
+Backend technology
+
+It provide features such as routing, middle ware support, request and response handling, template rendering, REST API creation.
+
+Why express needed even when we have node.js ?
+Ans - Node.js is a runtime environment that allows us to run JavaScript on the server, 
+      but it does not provide many high-level features for building web applications. for e.g. - Manually handle: routing, requests, responses
+
+      Express.js is a framework built on top of Node.js that simplifies server development by providing features like 
+      routing, middleware, and easier request and response handling. It has simple functions like app.get(), app.post()
+      
+      In short, Node.js provides the base, while Express makes development faster and easier.
+      Node js is used in simple application not suitable for the large application then to overcome this express js is used
+
+Why we do not write port number in file why we write it in .env file in company level ?
+Ans - In company-level applications, the port number is stored in a .env file instead of 
+      hardcoding it in the code to improve flexibility and maintainability.
+      1.Flexibility - Different environments need different ports Local → 3000 Production → 80 / 5000 , using environment variables allows changing them without modifying the code.
+      2. Centralized Configuration - All important values (port, DB URL, API keys) in one place
+      3. Security - Sensitive data is not written in code 👉 .env is not pushed to GitHub
+      4. Industry Standard - Companies follow this for clean and scalable projects
+
+Difference between PUT, POST, PATCH ?
+Ans - 
+
+To check version of node ---> node -v
+1. npm init / npm init -y
+2. npm install express
+3. create entry file index.js
+
+long form of each command - what is does , what is its work
+
+Express activites
+Activity 1 - Difference between package.json and package-lock.json
+Activity 2 - Difference between Dev dependencies and dependencies
+Activity 3 - routes creation and use js in that
+Activity 4 - types of HTTP methods GET, PUT, POST, DELETE
+
+Routing in Express Js :- 
+Routing refers to determining how application respond to a client request for specific URL and HTTP methods
+
+Components of routing - URL path, 
+   		      - HTTP methods
+		      - Handler function
+
+------Lecture Date - 25/03/2026 --------------------
+Middleware in Express JS -> Middleware is a function that execute during request before sending the final response
+They have access to request , response and next
+
+Flow 
+Client ------------> middle ware -----------> server
+
+Real time example - login pages
+
+Middleware activities
+Activity 1 - Why we use middleware ?
+Activity 2 - What are the types of middleware ?
+Activity 3 - What are the benefits of middleware ?
+Activity 4 - Where the middleware is used in company level ?
+
+Flow of express
+1. import statements 
+2. middleware
+3. routes
+4. port listen code
+
+What are the query parameters ? --MOST IMPORTANT
+
+Query parameter activities
+//Activity 1 - detail study about query parameter  
+//Activity 2 - 3-4 examples of query parameters 
+//Activity 3 - real time use of query parameter
+
+
+
+
+
+
+
+
+
+
+
+
+

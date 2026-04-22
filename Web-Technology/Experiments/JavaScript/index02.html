@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color:purple;
+        }
+        label{
+            font-weight:  bold;
+        }
+        button{
+            border-radius: 7px;
+            color:purple;
+            background-color: white;
+            text-align: center;
+            padding: 7px;
+        }
+        input{
+            border-radius: 10px;
+            background-color: white;
+            padding: 7px;
+        }
+        ::placeholder{
+            color:rgb(187, 147, 224);
+            font-style: italic;
+        }
+        div{
+            width: fit-content;
+            margin:60px auto;
+            padding: 30px;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1> Simple calculator </h1>
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <span id="num1Error"></span>
+
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" placeholder="Enter second number">
+        <span id="num2Error"></span>
+        <br><br>
+
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <br><br>
+
+        <label for="result">Result : </label>
+        <input type="text" id="result" placeholder="Result" readonly>
+        <span id="resultError"></span>
+    </div>
+
+    <script src="DOM_activity.js"></script>
+</body>
+</html>

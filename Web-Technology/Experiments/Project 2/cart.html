@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Shopping Cart</title>
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        background:#f4f6f8;
+    }
+
+    .navbar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 40px;
+        background:#222;
+        color:white;
+    }
+
+    .logo{
+        font-size:22px;
+        font-weight:bold;
+    }
+
+    .nav-links{
+        list-style:none;
+        display:flex;
+        gap:25px;
+    }
+
+    .nav-links a{
+        text-decoration:none;
+        color:white;
+    }
+
+    .nav-links a:hover{
+        color:#00c3ff;
+    }
+
+    .header{
+        text-align:center;
+        padding:30px;
+    }
+
+    .cart-container{
+        width:90%;
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+        gap:25px;
+        padding-bottom:30px;
+    }
+
+    .card{
+        background:white;
+        border-radius:10px;
+        padding:15px;
+        text-align:center;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img{
+        height:150px;
+        object-fit:contain;
+    }
+
+    .card h3{
+        font-size:16px;
+        margin:10px 0;
+    }
+
+    .remove-btn{
+        padding:8px 12px;
+        border:none;
+        background:red;
+        color:white;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    .remove-btn:hover{
+        background:darkred;
+    }
+
+    .total-section{
+        text-align:center;
+        padding:20px;
+    }
+
+    .total-section h2{
+        margin-bottom:15px;
+    }
+
+    .buy-btn{
+        padding:12px 20px;
+        border:none;
+        background:green;
+        color:white;
+        font-size:16px;
+        border-radius:6px;
+        cursor:pointer;
+    }
+
+    .buy-btn:hover{
+        background:darkgreen;
+    }
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2 class="logo">MyStore</h2>
+
+    <ul class="nav-links">
+        <li><a href="Project2.html">Home</a></li>
+        <li><a href="cart.html">My Shopping 🛒</a></li>
+    </ul>
+</nav>
+
+<header class="header">
+    <h1>My Shopping Cart</h1>
+</header>
+
+
+<main>
+    <div id="cartContainer" class="cart-container">
+        
+    </div>
+</main>
+
+<div class="total-section">
+    <h2>Total: ₹ <span id="totalPrice">0</span></h2>
+
+    <button class="buy-btn" onclick="placeOrder()">
+        Buy Now
+    </button>
+</div>
+
+<script src="Storage.js"></script>
+<script src="cart.js"></script>
+
+</body>
+</html>

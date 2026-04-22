@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div id="mydiv">
+        <h1 id="title" class="heading">
+            DOM learning on chai aur code 
+            <span style="display: none;">test Text</span>
+        </h1>
+
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit ame hjhjhhjt.</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+        <input type="password">
+
+        <ul>
+            <li class="list-item" id="chiku">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+            <li class="list-item">Four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!----DOM Tags-->
+<!----
+1. document.getElementById("title") //returns an element with specified value and returns null if value does't exist
+//if two id's are same then it returns first one
+
+2. document.getElementById("title").innerHTML="<h1>Siddhi</h1>"  //used to change the specific element
+let html = document.getElementById("title").innerHTML //to get element with that id
+document.getElementById("title").innerHTML=""; //to delete specific element
+
+//to access the id
+3. let element = document.getElementById("title");
+let elementId = element.id;
+
+//to get or set the entire class atrribute as a string
+4. const myEle = document.getElementById("title");
+myEle.className  //output - heading 
+--to overwrite all classes
+myEle.className = 'newClass';
+
+5. ---- The setAttribute() method sets a new value to an attribute.
+---- SYNTAX -- element.setAttribute(name, value)
+---- name = required - name of the attribute
+---- value = required - the new attribute value
+-- return value - none
+-- example - 
+const myele = document.getElementById("title");
+myele.setAttribute("style", "background-color:purple;"); //changes the background color to purpl
+
+6. //The getAttribute() method returns the value of an element's attribute.
+-- element.getAttribute(name)
+-- name	 = Required --The name of the attribute
+-- return value - String - 	The attribute's value (null if the attribute does not exist.)
+
+7. The querySelector() method returns the first child element that matches a specified CSS selector(s) of an element.
+- example -- let newEle = document.getElementById("mydiv");
+            newEle.querySelector('h2'); // output -- <h2>Lorem ipsum dolor sit amet.</h2>
+            newEle.querySelector('h2').innerHTML="Hello I am siddhi"; // changes the text and  display new text 
+
+8. The querySelectorAll() method returns all child elements that matches a CSS selector(s).
+    The querySelectorAll() method returns a NodeList.
+    The querySelectorAll() method throws a SYNTAX_ERR exception if the selector(s) is invalid
+
+example- let list = newEle.querySelectorAll('h2');
+        list[0].setAttribute('style', "background-color:purple"); //changes background color to purple 
+        we can change or add or getAttribute by taking the list items one by one by using indexing
+
+
+3. create one simple project by using javaSript and DOM 
+----->

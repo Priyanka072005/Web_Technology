@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "CipherQuest 2K25",
+    "date": "2025-09-08",
+    "time": "10:00 AM",
+    "location": "Auditorium Hall, College Campus",
+    "description": "Crack the code.Race the clock.Own the quest",
+    "registrations": 120,
+    "fundsCollected": 3000,
+    "status": "completed"
+  },
+  {
+    "id": 2,
+    "title": "Web Development Workshop",
+    "date": "2025-11-20",
+    "time": "2:00 PM",
+    "location": "NDL lab, Computer Science Department",
+    "description": "Hands-on workshop on MERN stack and modern web practices.",
+    "registrations": 85,
+    "fundsCollected": 4000,
+    "status": "completed"
+  },
+  {
+    "id": 3,
+    "title": "AI & ML Seminar",
+    "date": "2026-01-05",
+    "time": "11:00 AM",
+    "location": "Seminar Hall",
+    "description": "Talks by industry experts on AI, ML, and Data Science trends.",
+    "registrations": 150,
+    "fundsCollected": 7500,
+    "status": "completed"
+  },
+  {
+    "id": 4,
+    "title": "Hackathon 2026",
+    "date": "2026-03-15",
+    "time": "10:00 AM",
+    "location": "Central computer lab",
+    "description": "24-hour coding challenge",
+    "registrations": 200,
+    "fundsCollected": 5000,
+    "status": "upcoming"
+  }
+]
