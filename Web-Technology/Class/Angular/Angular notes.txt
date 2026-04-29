@@ -9,7 +9,7 @@ node js, npm (Node package manager), CLI(Command Line Interface)
 
 CLI - Used for create and manage angular apps
 
-IQ :-
+Q :-
 1.How to create angular project
 2.what is npm and ng
 

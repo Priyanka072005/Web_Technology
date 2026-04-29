@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 
 //route
 app.get('/', (req, res) => {
-    res.render('index', {name:"Siddhi"});
+    res.render('index', {name:"Priyanka"});
 });
 
 app.listen(3000, () => {

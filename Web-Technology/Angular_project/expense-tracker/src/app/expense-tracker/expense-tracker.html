@@ -1,0 +1,41 @@
+<div style="width:350px; margin:auto; text-align:center">
+
+  <h2>Expense Tracker</h2>
+
+  <!-- Input Section -->
+  <input [(ngModel)]="title" placeholder="Enter title"><br><br>
+
+  <input type="number" [(ngModel)]="amount" placeholder="Enter amount"><br><br>
+
+  <select [(ngModel)]="type">
+    <option value="income">Income</option>
+    <option value="expense">Expense</option>
+  </select><br><br>
+
+  <button (click)="addTransaction()">Add</button>
+
+  <hr>
+
+  <!-- Summary -->
+  <h3>Income: {{ getTotalIncome() }}</h3>
+  <h3>Expense: {{ getTotalExpense() }}</h3>
+  <h3>Balance: {{ getBalance() }}</h3>
+
+  <hr>
+
+  <!-- Transaction List -->
+  <ul style="list-style:none; padding:0">
+    <li *ngFor="let t of transactions; let i = index">
+
+      <span [ngStyle]="{color: t.type === 'income' ? 'green' : 'red'}">
+        {{ t.title }} - ₹{{ t.amount }}
+      </span>
+
+      <button (click)="deleteTransaction(i)">❌</button>
+
+    </li>
+  </ul>
+
+  <p *ngIf="transactions.length === 0">No transactions yet</p>
+
+</div>

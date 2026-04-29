@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Travel Cost Splitter</title>
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Travel Cost Splitter</h1>
+
+    <label>Fuel Cost (₹):</label>
+    <input type="number" id="fuel">
+
+    <label>Food Cost (₹):</label>
+    <input type="number" id="food">
+
+    <label>Toll Cost (₹):</label>
+    <input type="number" id="toll">
+
+    <label>Number of Friends:</label>
+    <input type="number" id="friends">
+
+    <button onclick="calculateCost()">Calculate</button>
+
+    <h2 id="total"></h2>
+    <h3 id="perPerson"></h3>
+    <p id="message"></p>
+</div>
+
+<script src="travel.js"></script>
+</body>
+</html>

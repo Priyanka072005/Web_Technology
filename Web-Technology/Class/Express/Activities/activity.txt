@@ -1,0 +1,134 @@
+activity no.1. Express Basics
+Difference: package.json vs package-lock.json
+package.json	                       package-lock.json
+Project info + dependencies         	Exact version lock
+Editable by developer	                Auto-generated
+Flexible versions (^, ~)	            Fixed versions
+
+Dependencies vs Dev Dependencies
+dependencies	                          devDependencies
+Required for app run	                  Only for development
+Example: express                          sample: nodemon
+
+Install :
+npm install express        // dependency
+npm install nodemon -D     // dev dependency
+
+ Create Basic Express Server
+    const express = require("express");
+    const app = express();
+
+    app.get("/", (req, res) => {
+    res.send("Home Page");
+    });
+
+    app.listen(3000, () => {
+    console.log("Server running on port 3000");
+    });
+
+
+Routes Creation
+app.get("/about", (req, res) => {
+  res.send("About Page");
+});
+
+app.get("/contact", (req, res) => {
+  res.send("Contact Page");
+});
+
+
+HTTP Methods
+
+// GET
+app.get("/user", (req, res) => res.send("Get User"));
+
+// POST
+app.post("/user", (req, res) => res.send("Create User"));
+
+// PUT
+app.put("/user", (req, res) => res.send("Update User"));
+
+// DELETE
+app.delete("/user", (req, res) => res.send("Delete User"));
+
+Activity no 2. Middleware
+Why Middleware?
+    To process request before response
+    Logging, authentication, validation
+
+Example Middleware
+const logger = (req, res, next) => {
+  console.log("Request received");
+  next();
+};
+
+app.use(logger);
+
+Types of Middleware - 
+    Application-level
+    Router-level
+    Built-in (express.json)
+    Third-party (cors, morgan)
+
+Benefits - 
+    Code reuse
+    Security
+    Clean structure
+
+Company Use - 
+    Authentication (JWT)
+    Logging (Morgan)
+    API validation
+
+Activity No.3. Query Parameters
+What are Query Params?
+  -> Data passed in URL after ?
+  -> Example : /search?name=rahul&age=22
+
+Access Query Params ->
+  app.get("/search", (req, res) => {
+  const name = req.query.name;
+  const age = req.query.age;
+
+  res.send(`Name: ${name}, Age: ${age}`);
+  });
+
+Example : 
+  /product?id=10
+  /user?name=Priyanka
+  /search?q=phone
+  /filter?price=1000&brand=samsung
+
+Real-Time Use ->
+    Search filters
+    Pagination
+    Sorting
+    API filtering
+
+Activity No.4. Template Engine (EJS)
+
+Install EJS -> npm install ejs
+
+Setup EJS -> app.set("view engine", "ejs");
+
+Create Folder -> views/home.ejs
+
+
+Activity no.5 Static Files ->
+What are Static Files?
+  -> CSS, JS, Images
+
+Setup Static Folder -> app.use(express.static("public"));
+folder -> public/style.css and image.png
+
+
+
+Activity no. 6. Express Router ->
+
+Why Router?
+    Separate routes into files
+
+
+Complete Express Workflow->
+    “Client sends request → Middleware processes request → Route handles logic → Response sent back to client”
+
